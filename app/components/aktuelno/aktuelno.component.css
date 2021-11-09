@@ -1,0 +1,24 @@
+
+
+.aktSlika {
+  background: url('../../../assets/Slike/tvc6.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-right: 0px;
+  padding-left: 0px;
+  
+}
+.row {
+  background-color: rgba(248, 248, 248, 0.877);
+  height: auto;
+}
+
+.iotSlika {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background: url('../../../assets/Slike/tvc.jpg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

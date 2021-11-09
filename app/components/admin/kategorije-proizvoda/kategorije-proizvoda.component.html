@@ -1,0 +1,19 @@
+<h1 class="text-center text-secondary">Kategorije Proizvoda</h1>
+ <a class="btn btn-secondary mb-3" routerLink="/dashboard/nova-kategorija-proizvoda" ><i class="fa fa-plus"></i></a>
+  
+  <ngx-datatable class="material" [rows]="kategorijaProizvoda" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+  [rowHeight]="80" [scrollbarV]="false" [sorts]="[{prop: 'Naslov', dir: 'asc'}]">
+
+  <ngx-datatable-column name="Naslov" [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{row.Naziv}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Akcija" [sortable]="false">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <div class="btn-group"><a routerLink="/dashboard/izmjena-kategorija-proizvod/{{row.Id}}" class="btn mr-2 inline"><i class="fa fa-2x fa-edit"></i></a><a (click)="onDeleteClick(row)" class="btn inline"><i class="fa fa-2x fa-trash"></i></a></div>
+    </ng-template>
+  </ngx-datatable-column>
+
+</ngx-datatable>
+
